@@ -1,0 +1,2 @@
+FROM mikkl/multiarch-mongodb:amd64
+CMD mongod

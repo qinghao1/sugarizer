@@ -1,3 +1,35 @@
-#main-toolbar #activity-button {
-  background-image: url(../activity/activity-icon.svg);
+#main-toolbar #restart-button {
+  background-image: url(../restart.svg);
+}
+#canvas {
+	width: 100%;
+}
+
+#wrapper {
+	display:flex;
+	justify-content:center;
+	position: relative;
+	top: 45%;
+	transform: translateY(-45%);
+}
+
+#msg {
+	height: 35px;
+	top: 10px;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+td {
+	border: 5px solid black;
+	border-radius: 10px;
+	height: 100px;
+	width: 100px;
+	font-size: 40px;
+	text-align: center;
+}
+
+#toggle-grid-button {
+	background-image: url(../restart.svg);
 }
