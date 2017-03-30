@@ -8,9 +8,7 @@ define(["sugar-web/activity/activity"], function (activity) {
 		var cellArr = [null, null, null, null, null, null, null, null, null];
 		var players = ["O", "X"];
 		var currPlayer = 0;
-
-		function win() {
-			var combinations = [
+		var combinations = [
 				[0,1,2],
 				[3,4,5],
 				[6,7,8],
@@ -19,14 +17,17 @@ define(["sugar-web/activity/activity"], function (activity) {
 				[2,5,8],
 				[0,4,8],
 				[2,4,6]
-			];
-			function hit(i) {
+		];
+
+		function hit(i) {
 				return cellArr[combinations[i][0]] 
 				&& cellArr[combinations[i][1]]
 				&& cellArr[combinations[i][2]]
 				&& cellArr[combinations[i][0]] === cellArr[combinations[i][1]]
 				&& cellArr[combinations[i][1]] === cellArr[combinations[i][2]];
-			}
+		}
+
+		function win() {
 			for (var i = 0; i < 8; i++) {
 				if (hit(i)) return true;
 			}
