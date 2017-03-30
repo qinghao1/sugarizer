@@ -37,11 +37,9 @@ define(["sugar-web/activity/activity"], function (activity) {
 			if (!cellArr[this.id]) {
 				cellArr[this.id] = players[currPlayer];
 				$(this).html(players[currPlayer]);
+				if (win()) $("#msg").html("Congrats! " + players[currPlayer] + " won!");
+				currPlayer = 1 - currPlayer;
 			}
-			if (win()) {
-				$("#msg").html("Congrats! " + players[currPlayer] + " won!");
-			}
-			currPlayer = 1 - currPlayer;
 		});
 
 		$("#restart-button").click(function() {
